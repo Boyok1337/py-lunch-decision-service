@@ -4,7 +4,7 @@ from django.db import models
 class Restaurant(models.Model):
     name = models.CharField(max_length=255)
     address = models.CharField(max_length=255)
-    votes = models.PositiveIntegerField(default=0)
+    votes = models.PositiveIntegerField(default=0)  # via celery this param will set to default every day in midnight
 
     def __str__(self):
         return self.name

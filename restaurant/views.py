@@ -22,7 +22,7 @@ class RestaurantViewSet(viewsets.ModelViewSet):
             .distinct()
             .order_by("-votes")[:1]
         )
-        return restaurants_with_today_menu
+        return restaurants_with_today_menu  # always return restaurant with most votes to get current dat result and day menu
 
     def get_serializer_class(self):
         serializer_class = RestaurantSerializer

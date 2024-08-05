@@ -45,6 +45,7 @@ python manage.py createsuperuser
 
 - JWT Authentication
 - Docker
+- Celery
 
 
 ## 📝 Contributing
